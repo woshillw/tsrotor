@@ -1,0 +1,21 @@
+<launch>
+  <arg name="mav_name" default="tsrotor"/>
+  <arg name="type" default="x"/>
+  <group ns="$(arg mav_name)">
+    <node name="adrc_test" pkg="tsrotor" type="adrc_test" output="screen">
+      <rosparam command="load" file="$(find tsrotor)/config/$(arg mav_name)_adrc_controller.yaml" />
+      <rosparam command="load" file="$(find tsrotor)/config/$(arg mav_name)_vehicle.yaml" />
+      <param name="vehicle/type" type="str" value="$(arg type)" />
+    </node>
+  </group>
+
+  <!-- <node name="rqt_der" pkg="rqt_plot" type="rqt_plot" args="/$(arg mav_name)/state/roll_der /$(arg mav_name)/state/pitch_der /$(arg mav_name)/state/yaw_der">
+  </node>
+  <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" args="/$(arg mav_name)/state/roll /$(arg mav_name)/state/pitch /$(arg mav_name)/state/yaw">
+  </node> -->
+  <!-- 
+  <node name="plot_pos" pkg="rqt_plot" type="rqt_plot" args="/$(arg mav_name)/state/xpos /$(arg mav_name)/state/ypos /$(arg mav_name)/state/zpos">
+  </node>
+  <node name="plot_vel" pkg="rqt_plot" type="rqt_plot" args="/$(arg mav_name)/state/xvel /$(arg mav_name)/state/yvel /$(arg mav_name)/state/zvel">
+  </node> -->
+</launch>

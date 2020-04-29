@@ -1,0 +1,361 @@
+<robot name="tsrotor">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-4.87589589395242E-16 -2.60212705697934E-16 -0.106388017397921" rpy="0 0 0" />
+      <mass value="1.80413765510433" />
+      <inertia ixx="0.0171696138530973" ixy="4.45289306950997E-12" ixz="-1.94333353334598E-17" iyy="0.0171696138594809" iyz="1.04896560187973E-17" izz="0.0271418722730733" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tilt1">
+    <inertial>
+      <origin xyz="0.0300434245996924 -1.1189937865197E-12 0.0300953400847536" rpy="0 0 0" />
+      <mass value="0.0356343325816378" />
+      <inertia ixx="6.34392232985286E-06" ixy="6.75131845773776E-17" ixz="-1.90688104722456E-06" iyy="8.99025192745281E-06" iyz="-6.81099007598726E-16" izz="2.64632959759995E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt1_joint" type="continuous">
+    <origin xyz="0.33107186087228 -0.19114442799572 0" rpy="0.17513564399147 7.32053306862213E-16 -0.523598775598297" />
+    <parent link="base_link" />
+    <child link="tilt1" />
+    <axis xyz="1 0 0" />
+  </joint>
+  <link name="rotor1">
+    <inertial>
+      <origin xyz="2.00982670506278E-08 -8.35926622366756E-09 0.00632328978018638" rpy="0 0 0" />
+      <mass value="0.00443285407964803" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor1_joint" type="continuous">
+    <origin xyz="0.0318999999999997 0 0.04715" rpy="-7.63278329429795E-16 -6.93889390390723E-17 -0.354312500376648" />
+    <parent link="tilt1" />
+    <child link="rotor1" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="tilt2">
+    <inertial>
+      <origin xyz="0.0300434245849683 -4.5933235113519E-12 0.0300953400734352" rpy="0 0 0" />
+      <mass value="0.0356343326219293" />
+      <inertia ixx="6.34392233187605E-06" ixy="2.77150874407502E-16" ixz="-1.9068810566687E-06" iyy="8.99025192758363E-06" iyz="-2.79571779274049E-15" izz="2.64632959570758E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt2_joint" type="continuous">
+    <origin xyz="0 -0.382288855991442 0" rpy="-0.2819039734236 0 -1.5707963267949" />
+    <parent link="base_link" />
+    <child link="tilt2" />
+    <axis xyz="1 0 0" />
+  </joint>
+  <link name="rotor2">
+    <inertial>
+      <origin xyz="-6.20219602204264E-08 9.97721855133804E-09 0.00632148557510061" rpy="0 0 0" />
+      <mass value="0.00443456318622908" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor2_joint" type="continuous">
+    <origin xyz="0.0319 0 0.04715" rpy="-3.60822483003176E-16 -5.55111512312578E-17 -1.33144176630474" />
+    <parent link="tilt2" />
+    <child link="rotor2" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="tilt3">
+    <inertial>
+      <origin xyz="0.0300434245987622 -6.31356078528711E-12 0.0300953400880159" rpy="0 0 0" />
+robots
+      <mass value="0.0356343325851182" />
+      <inertia ixx="6.34392232486629E-06" ixy="3.80946715280517E-16" ixz="-1.90688104808813E-06" iyy="8.99025192234402E-06" iyz="-3.84277460587358E-15" izz="2.64632959747773E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>robots
+        <mesh filename="package://tsrotor/meshes/tilt3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt3_joint" type="continuous">
+    <origin xyz="-0.331071860872278 -0.191144427995725 0" rpy="0.275096432600435 1.56125112837913E-17 -2.61799387799148" />
+    <parent link="base_link" />
+    <child link="tilt3" />
+    <axis xyz="-1 0 0" />
+  </joint>
+  <link name="rotor3">
+    <inertial>
+      <origin xyz="7.0577700497787E-07 3.45647369115465E-07 0.00632293857992548" rpy="0 0 0" />
+      <mass value="0.00443302028014482" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor3_joint" type="continuous">
+    <origin xyz="0.0319000000000001 0 0.04715" rpy="2.4980018054066E-16 -3.05311331771918E-16 1.71890611472678" />
+    <parent link="tilt3" />
+    <child link="rotor3" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="tilt4">
+    <inertial>
+      <origin xyz="0.0300434245975469 8.36275493298899E-14 0.0300953400878519" rpy="0 0 0" />
+      <mass value="0.035634332588323" />
+      <inertia ixx="6.34392232413098E-06" ixy="-5.0400577943999E-18" ixz="-1.90688104891063E-06" iyy="8.99025192145283E-06" iyz="5.09028684817208E-17" izz="2.64632959732185E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt4_joint" type="continuous">
+    <origin xyz="-0.331071860872281 0.191144427995718 0" rpy="-0.341157048391261 8.89913143176102E-16 2.6179938779915" />
+    <parent link="base_link" />
+    <child link="tilt4" />
+    <axis xyz="-1 0 0" />
+  </joint>
+  <link name="rotor4">
+    <inertial>
+      <origin xyz="3.42929778185397E-07 -7.54601640062802E-08 0.00632200094187467" rpy="0 0 0" />
+      <mass value="0.00443455271816263" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor4_joint" type="continuous">
+    <origin xyz="0.0318999999999998 0 0.04715" rpy="2.77555756156289E-16 -2.77555756156289E-17 0.720102393573995" />
+    <parent link="tilt4" />
+    <child link="rotor4" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="tilt5">
+    <inertial>
+      <origin xyz="0.0300434245853101 -3.40043291901025E-12 0.0300953400757095" rpy="0 0 0" />
+      <mass value="0.0356343326214522" />
+      <inertia ixx="6.34392232924666E-06" ixy="2.05174373470356E-16" ixz="-1.90688105658417E-06" iyy="8.99025192499688E-06" iyz="-2.06966425854308E-15" izz="2.64632959575022E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt5.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt5_joint" type="continuous">
+    <origin xyz="0 0.382288855991442 0" rpy="-0.705587154197049 3.45921832065852E-16 1.5707963267949" />
+    <parent link="base_link" />
+    <child link="tilt5" />
+    <axis xyz="-1 0 0" />
+  </joint>
+  <link name="rotor5">
+    <inertial>
+      <origin xyz="-1.55205506224831E-08 1.12908954408297E-09 0.00632260628743601" rpy="0 0 0" />
+      <mass value="0.00443307785173912" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor5.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor5_joint" type="continuous">
+    <origin xyz="0.0319000000000001 0 0.04715" rpy="-6.35778240303464E-17 -8.32617221591373E-16 -1.86074734210479" />
+    <parent link="tilt5" />
+    <child link="rotor5" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <link name="tilt6">
+    <inertial>
+      <origin xyz="0.0300434245967912 -4.52599069333814E-12 0.0300953400842228" rpy="0 0 0" />
+      <mass value="0.0356343325896418" />
+      <inertia ixx="6.34392232816384E-06" ixy="2.73090198458364E-16" ixz="-1.90688104918985E-06" iyy="8.99025192539075E-06" iyz="-2.75472562002323E-15" izz="2.64632959722691E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt6.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/tilt6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tilt6_joint" type="continuous">
+    <origin xyz="0.331071860872279 0.191144427995723 0" rpy="-0.341157048391267 1.04083408558608E-16 0.523598775598304" />
+    <parent link="base_link" />
+    <child link="tilt6" />
+    <axis xyz="1 0 0" />
+  </joint>
+  <link name="rotor6">
+    <inertial>
+      <origin xyz="-1.43363220739268E-07 4.06186895229865E-08 0.00632110704655436" rpy="0 0 0" />
+      <mass value="0.00443464910879901" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor6.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://tsrotor/meshes/rotor6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rotor6_joint" type="continuous">
+    <origin xyz="0.0318999999999999 0 0.04715" rpy="2.22044604925031E-16 -5.13478148889135E-16 2.90019938099611" />
+    <parent link="tilt6" />
+    <child link="rotor6" />
+    <axis xyz="0 0 1" />
+  </joint>
+</robot>

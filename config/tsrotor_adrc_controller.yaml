@@ -1,0 +1,116 @@
+##################################
+#--------------位置--------------#
+adrc_pos_0: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1.0, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 1.5, type: 0},
+output_limit: 100
+
+}
+
+adrc_pos_1: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1.0, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 1.5, type: 0},
+output_limit: 100
+
+}
+
+adrc_pos_2: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1.0, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 2.0, type: 0},
+output_limit: 100
+
+}
+
+#################################
+#--------------速度--------------#
+adrc_vel_0: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 5, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 2.0, type: 0},
+output_limit: 1
+
+}
+
+adrc_vel_1: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 5, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 2.0, type: 0},
+output_limit: 1
+
+}
+
+adrc_vel_2: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1.5, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 5.0, type: 0},
+output_limit: 1
+
+}
+
+#################################
+#--------------角度--------------#
+adrc_angle_0: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 0.01, type: 1},
+output_limit: 100
+
+}
+
+adrc_angle_1: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 0.01, type: 1},
+output_limit: 100
+
+}
+
+adrc_angle_2: {
+
+td: {h: 0.004, r: 3},
+eso: {a1: 0.5, delta: 0.02, b0: 1, beta1: 200, beta2: 1780, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 0.01, type: 1},
+output_limit: 100
+
+}
+
+#################################
+#--------------角速度--------------#
+adrc_angle_vel_0: {
+
+td: {h: 0.004, r: 0.2},
+eso: {a1: 0.5, delta: 0.02, b0: 15, beta1: 250, beta2: 2470, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 5.0, type: 1},
+output_limit: 3
+
+}
+
+adrc_angle_vel_1: {
+
+td: {h: 0.004, r: 0.2},
+eso: {a1: 0.5, delta: 0.02, b0: 15, beta1: 250, beta2: 2470, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 5.0, type: 1},
+output_limit: 3
+
+}
+
+adrc_angle_vel_2: {
+
+td: {h: 0.004, r: 0.2},
+eso: {a1: 0.5, delta: 0.02, b0: 15, beta1: 250, beta2: 2470, switchb0: 1},
+nlsef: {alpha: 0.5, delta: 1, beta: 5.0, type: 1},
+output_limit: 3
+
+}
+#################################

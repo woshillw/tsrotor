@@ -1,0 +1,1 @@
+controller_joint_names: ['tilt1_joint', 'rotor1_joint', 'tilt2_joint', 'rotor2_joint', 'tilt3_joint', 'rotor3_joint', 'tilt4_joint', 'rotor4_joint', 'tilt5_joint', 'rotor5_joint', 'tilt6_joint', 'rotor6_joint', ]
